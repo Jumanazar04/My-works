@@ -7,8 +7,36 @@ const second = document.querySelector('.second');
 
 let time =new Date();
 console.log(time);
-let days = time.getDay();
+let days = time.getDate();
 console.log(days);
 
-const data = ['Monday', 'Theusday', 'Wendesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-console.log(data[0]);
+const data = 
+    ['Monday', 
+    'Theusday', 
+    'Wendesday', 
+    'Thursday', 
+    'Friday', 
+    'Saturday', 
+    'Sunday'];
+console.log(data[days - 1]);
+
+
+const months = 
+    ['January',
+     'February',
+     'March',
+     'April', 
+     'May', 
+     'June', 
+     'July', 
+     'August', 
+     'September', 
+     'Oktober', 
+     'November', 
+     'December'];
+let oy = time.getMonth()
+console.log(months[oy]);
+let years = time.getFullYear();
+console.log(years);
+
+day.textContent = days;
