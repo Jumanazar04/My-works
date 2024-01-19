@@ -5,5 +5,7 @@ const hour = document.querySelector('.hour');
 const minute = document.querySelector('.minute');
 const second = document.querySelector('.second');
 
-let time = Date();
+let time =new Date();
 console.log(time);
+let days = time.getDay();
+console.log(days);
