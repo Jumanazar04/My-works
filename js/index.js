@@ -8,7 +8,7 @@ const second = document.querySelector('.second');
 let time =new Date();
 console.log(time);
 let days = time.getDate();
-console.log(days);
+
 
 const data = 
     ['Monday', 
@@ -39,4 +39,8 @@ console.log(months[oy]);
 let years = time.getFullYear();
 console.log(years);
 
-day.textContent = days;
+if(days < 10){
+    day.textContent = '0' + days;
+}else{
+    day.textContent = days;
+}
