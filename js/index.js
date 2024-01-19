@@ -9,3 +9,6 @@ let time =new Date();
 console.log(time);
 let days = time.getDay();
 console.log(days);
+
+const data = ['Monday', 'Theusday', 'Wendesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+console.log(data[0]);
