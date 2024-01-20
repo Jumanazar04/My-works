@@ -35,6 +35,7 @@ h1{
     margin: 0 auto;
     max-width: 300px;
     display: flex;
+    justify-content: center;
 }
 
 .hours {
@@ -43,6 +44,7 @@ h1{
     margin: 0 auto;
     max-width: 300px;
     display: flex;
+    justify-content: center;
 }
 
 .block {

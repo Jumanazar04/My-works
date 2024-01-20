@@ -34,10 +34,14 @@ const months =
      'Oktober', 
      'November', 
      'December'];
-let oy = time.getMonth()
-console.log(months[oy]);
+
+
+let oy = time.getMonth();
+month.textContent = months[oy];
+console.log(oy);
+
 let years = time.getFullYear();
-console.log(years);
+year.textContent = years;
 
 if(days < 10){
     day.textContent = '0' + days;
