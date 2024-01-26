@@ -4,6 +4,8 @@ const year = document.querySelector('.year');
 const hour = document.querySelector('.hour');
 const minute = document.querySelector('.minute');
 const second = document.querySelector('.second');
+const block = document.querySelector('.block');
+
 
 let time =new Date();
 console.log(time);
@@ -64,3 +66,35 @@ function getTimeOne (){
 setInterval(() => {
     getTimeOne()
 }, 1000)
+
+
+const user = [
+    {img: './images/mario.png', name: 'Mario', github: 'https://github.com/Jumanazar04/mario.git', netlify:'https://mario-jd.netlify.app/'},
+    {img: './images/calculator.png', name: 'Calculator', github: 'https://github.com/Jumanazar04/Calculator.git', netlify:'https://simplecalculator119.netlify.app/'},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+    // {img: '', name: '', github: '', netlify:''},
+]
+
+user.forEach((users)=> {
+    
+    return `
+    <div class="card">
+        <img src="${users.img}" alt="mario">
+        <p class="name">${users.name}</p>
+        <div class="link">
+            <a target="_blank" href="https://mario-jd.netlify.app/">GAME</a>
+            <a target="_blank" href="https://github.com/Jumanazar04/mario.git">GIT HUB</a>
+        </div>
+    </div>
+    `
+})
