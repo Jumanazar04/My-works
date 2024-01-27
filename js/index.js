@@ -86,15 +86,45 @@ const user = [
 ]
 
 user.forEach((users)=> {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    block.appendChild(card);   
     
-    return `
-    <div class="card">
-        <img src="${users.img}" alt="mario">
-        <p class="name">${users.name}</p>
-        <div class="link">
-            <a target="_blank" href="https://mario-jd.netlify.app/">GAME</a>
-            <a target="_blank" href="https://github.com/Jumanazar04/mario.git">GIT HUB</a>
-        </div>
-    </div>
-    `
+    const img = document.createElement('img');
+    img.classList.add('img');
+    card.appendChild(img);
+    img.srcset = users.img;
+    img.alt = 'image';
+
+    const text = document.createElement('p');
+    text.classList.add('text');
+    card.appendChild(text);
+    text.textContent = users.name;
+
+    const link = document.createElement('div');
+    link.classList.add('link');
+    card.appendChild(link);
+
+
+    const aLink = document.createElement('a');
+    link.appendChild(aLink);
+    aLink.target = '_blank';
+    aLink.href = users.netlify;
+    aLink.textContent = 'GAME';
+    const aLinkGithub = document.createElement('a');
+    link.appendChild(aLinkGithub);
+    aLinkGithub.target = '_blank';
+    aLinkGithub.href = users.github;
+    aLinkGithub.textContent = 'GITHUB';
+
+    // return `
+    // <div class="card">
+    //     <img src="${users.img}" alt="mario">
+    //     <p class="name">${users.name}</p>
+    //     <div class="link">
+    //         <a target="_blank" href="https://mario-jd.netlify.app/">GAME</a>
+    //         <a target="_blank" href="https://github.com/Jumanazar04/mario.git">GIT HUB</a>
+    //     </div>
+    // </div>
+    // `
 })
